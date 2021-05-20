@@ -98,7 +98,7 @@ return [
         'default'       => 'internal',
         'engines'       => [
             'internal'  => [
-                'index' => ['h1', 'h2', 'h3', 'p']
+                'index' => ['h2', 'h3']
             ]
         ]
     ],

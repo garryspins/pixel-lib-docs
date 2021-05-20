@@ -1,5 +1,6 @@
 - [Fonts](#fonts)
 - [Images](#images)
+- [Scale](#scale)
 
 <a name="fonts"></a>
 ## Fonts
@@ -67,3 +68,24 @@ The spinner image will automatically be downloaded when PIXELLib is loaded.
         PIXEL.DrawImgur(0, 0, 512, 512, "C9Sm90a")
     end)
 ```
+
+<a name="scale"></a>
+## Scale
+PIXELLib provides functions to scale with ease
+
+### PIXEL.Scale(sz)
+- Returns the size scaled based on screen height
+```php.line-numbers lua
+    hook.Add("HUDPaint", "PIXEL.Lib.Test", function()
+        local imageSize = PIXEL.Scale(512)
+        surface.SetDrawColor(color_white)
+        PIXEL.DrawImgur(0, 0, imageSize, imageSize, "C9Sm90a")
+    end)
+```
+
+###PIXEL.ScaleH(sz)
+- Pointer to PIXEL.Scale
+
+###PIXEL.ScaleW(sz)
+- Returns the size scaled based on screen width
+

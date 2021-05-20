@@ -94,3 +94,22 @@ PIXELLib provides functions to scale with ease
 ## Color
 PIXELLib provides more functions ontop of the existing color metatable
 
+###Color:Copy()
+- Returns a copy of the color
+```php.line-numbers lua
+    local newColor = PIXEL.Colors.PrimaryText:Copy()
+```
+
+###Color:Offset()
+- Returns a copy of the color with the provided offset
+```php.line-numbers lua
+    local newColor = Color(0, 0, 0)
+    local newerColor = newColor:Offset(30)
+    print(newerColor) //Prints 30, 30, 30
+```
+
+###Color:Lerp(amount, to)
+- Returns the color lerped by the amount
+```php.line-numbers lua
+    self.Colors.Current = self.Colors.Current:Lerp(FrameTime() * 10, self.Colors.Normal)
+```

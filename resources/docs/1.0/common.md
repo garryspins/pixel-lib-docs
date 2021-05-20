@@ -1,6 +1,7 @@
 - [Fonts](#fonts)
 - [Images](#images)
 - [Scale](#scale)
+- [Color](#color)
 
 <a name="fonts"></a>
 ## Fonts
@@ -88,4 +89,8 @@ PIXELLib provides functions to scale with ease
 
 ###PIXEL.ScaleW(sz)
 - Returns the size scaled based on screen width
+
+<a name="color"></a>
+## Color
+PIXELLib provides more functions ontop of the existing color metatable
 

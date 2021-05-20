@@ -6,3 +6,5 @@
     - [Common](/{{version}}/common)
     - [Drawing](/{{version}}/drawing)
     - [Elements](/{{version}}/elements)
+    - [Colors](/{{version}}/colors)
+

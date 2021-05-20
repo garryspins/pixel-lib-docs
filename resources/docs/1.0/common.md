@@ -1,4 +1,5 @@
 - [Fonts](#fonts)
+- [Images](#images)
 
 <a name="fonts"></a>
 ## Fonts
@@ -40,4 +41,29 @@ PIXELLIb internally caches fonts based on size and weight. All fonts are Open Sa
 
     local w, h = PIXEL.GetTextSize(string, font)
     print(w .. " " .. h)
+```
+
+<a name="images"></a>
+## Images
+PIXELLib provides helper functions to draw images from imgur<br/>
+The spinner image will automatically be downloaded when PIXELLib is loaded.
+
+###PIXEL.ImgurDL(id)
+- Returns the material of the downloaded imgur ID
+- Don't cache the return value, because the function will return a spinner icon until the image is downloaded
+```php.line-numbers lua
+    hook.Add("HUDPaint", "PIXEL.Lib.Test", function() 
+        surface.SetDrawColor(color_white)
+        surface.SetMaterial(PIXEL.ImgurDL("C9Sm90a"))
+        surface.DrawTexturedRect(0, 0, 512, 512)
+    end)
+```
+
+###PIXEL.DrawImgur(x, y, w, h, id)
+- Will draw a spinner icon until the image is downloaded
+```php.line-numbers lua
+    hook.Add("HUDPaint", "PIXEL.Lib.Test", function()
+        surface.SetDrawColor(color_white)
+        PIXEL.DrawImgur(0, 0, 512, 512, "C9Sm90a")
+    end)
 ```
